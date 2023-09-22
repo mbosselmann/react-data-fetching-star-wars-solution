@@ -28,7 +28,7 @@ export default function Character() {
     fetcher
   );
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading || !data) return <div>Loading...</div>;
   if (error) return <div>Failed to load: {error.info}</div>;
 
   return (
